@@ -117,7 +117,24 @@ p {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.menu .studio .link{
+    color: #404BBF;
+}
+.menu .studio::after{
+    display: block;
+    width: 48px;
+    height: 4px;
+    background-color: #404BBF;
+    border-radius: 2px;
+    content: "";
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(1px);
+}
+
+
 .conect .link {
     color: #434455;
     font-size: 16px;
@@ -125,6 +142,7 @@ p {
     line-height: 1.5;
     letter-spacing: 0.02em;
     font-style: normal;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu .link:focus,
 .conect .link:focus,
@@ -136,7 +154,20 @@ p {
 /*service*/
 .service {
     background-color: #2E2F42;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46,
+            47,
+            66,
+            0.7),
+        rgba(46,
+            47,
+            66,
+            0.7)
+        ),
+        url(../images/bg-img.jpg);
     padding: 188px 0;
+    max-width: 1440px;
 }
 .service .container{
     color: #FFFFFF;
@@ -158,6 +189,7 @@ p {
     min-width: 169px;
     border: none;
     border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-text:focus,
 .button-text:hover {
@@ -193,6 +225,13 @@ p {
 .skils-pins .header-three{
     margin-bottom: 8px;
 }
+.skils-pins .icons{
+    background-color: #F4F4FD;
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+    padding: 24px 100px;
+    margin-bottom: 8px;
+}
 /*team*/
 .team {
     background-color: #F4F4FD;
@@ -215,14 +254,43 @@ p {
     text-align: center;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    box-shadow: 0px 1px 1px 0px rgba(46, 47, 66, 0.16); 
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-text{
-    padding: 32px 0;
-    
+    padding-top: 32px;
+    margin-bottom: 8px;
 }
 .card .header-three {
     margin-bottom: 8px;
 }
+.card .list {
+    padding-bottom: 32px;
+}
+.ns-logo{
+    position: relative;
+    fill: #F4F4FD;
+    background-color: #4D5AE5;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sn-icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.card:hover .ns-logo{
+    background-color: #404BBF;
+}
+.card:hover{
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
 /*portfolio*/
 .portfolio {
     padding: 120px 0;
@@ -235,6 +303,12 @@ p {
 }
 .portfolio-pins {
     width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-pins:hover{
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    box-shadow: 0px 1px 1px 0px rgba(46, 47, 66, 0.16); 
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 .portfolio .list {
     display: flex;
@@ -252,6 +326,29 @@ p {
 .card-p-text .header-three{
     margin-bottom: 8px;
 }
+.photo {
+    overflow: hidden;
+    position: relative;
+    width: 360px;
+    height: 300px;
+}
+.overlay{
+    color: #F4F4FD;
+    background-color: #4D5AE5;
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-pins:hover .overlay{
+    transform: translateY(0);
+}
 /*down-line*/
 
 .down-line {
@@ -265,11 +362,27 @@ p {
 }
 .down-line .container {
     margin-left: 156px;
+    display: flex;
+    gap: 120px;
+}
+.down-line .list{
+    display: flex;
+    gap: 16px;
 }
 
+.down-line .ns-logo:hover{
+    background-color: #31D0AA;
+}
 .down-line .p-text {
     margin: 0;
     max-width: 264px;
+}
+.m-text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
 }
 
 
